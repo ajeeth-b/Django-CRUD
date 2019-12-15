@@ -1,0 +1,14 @@
+{% extends "home.html" %}
+
+{% block title %} Delete {% endblock %}
+
+{% block content %}
+<h4>Enter the data to be updated</h4>
+<form class=""  method="POST">
+  {{form.as_p}}
+  {% csrf_token %}
+  <input type="submit" value="Delete">
+  <h5> {{notfound}}
+  </h5>
+</form>
+{% endblock %}

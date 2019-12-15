@@ -1,0 +1,13 @@
+{% extends "home.html" %}
+
+{% block title %} Create {% endblock %}
+
+{% block content %}
+<h4> Fill the fields and click save</h4>
+<form class=""  method="POST">
+  {% csrf_token %}
+  {{form.as_p}}
+  <input type="submit" value="save">
+</form>
+<h4>{{status}}</h4>
+{% endblock %}

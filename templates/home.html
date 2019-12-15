@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}USE ME AS TEMPLATE{% endblock %}</title>
+    <style media="screen">
+      li {
+         display: inline;
+         float: left;
+        }
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+        }
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        li a:hover {
+          background-color: #111;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="nav-bar">
+      <ul>
+      <li><a href="/create">Create</a></li>
+      <li><a href="/retrive">Read</a></li>
+      <li><a href="/update">Update</a></li>
+      <li><a href="/delete">Delete</a></li>
+  </ul>
+    </div>
+    {% block content %}<h1>ADD CONTENTS HERE</h1> {% endblock %}
+  </body>
+</html>
